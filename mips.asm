@@ -5,7 +5,6 @@
 .data
     fibInput: .asciiz "Which nth number of the fibonnaci do you wish to obtain? "
     seqPrompt: .asciiz "\nEnter n to print the Fibonacci sequence up to: "
-    seqHeader: .asciiz "\nFibonacci sequence: "
     space: .asciiz " "
     newLine: .asciiz "\n"
     fibOutput: .asciiz "The value of the: "
@@ -55,10 +54,6 @@ main:
     sw $t1, seqLimit # optional store in memory for clarity
     # also put limit into $s1 (saved register) so recursive print function can use it
     move $s1, $t1
-    # print header before sequence
-    li $v0, STRING_PRINT
-    la $a0, seqHeader
-    syscall
     # start printing sequence from i = 0
     li $a0, 0 # a0 = starting index i = 0
     jal print_sequence # recursively prints fib(0)..fib(n2)
