@@ -1,3 +1,7 @@
+# Name: <your name>
+# NSHE ID: <your id>
+# Assignment: <assignment number> program goes here
+
 .data
     fibInput: .asciiz "Which nth number of the fibonnaci do you wish to obtain? "
     seqPrompt: .asciiz "\nEnter n to print the Fibonacci sequence up to: "
@@ -13,6 +17,7 @@
     INT_PRINT = 1
     STRING_PRINT = 4
     INT_READ = 5
+
 .text
 ########################################################################
 # main
